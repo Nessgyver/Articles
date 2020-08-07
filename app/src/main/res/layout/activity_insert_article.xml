@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.InsertArticleActivity">
+
+    <TextView
+        android:id="@+id/titre_insertion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AJOUTER UN ARTICLE"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="10dp"
+        />
+
+    <EditText
+        android:id="@+id/et_nom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nom de l'article"
+        app:layout_constraintTop_toBottomOf="@id/titre_insertion"
+        android:layout_marginTop="25dp"
+        />
+
+    <EditText
+        android:id="@+id/et_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Description de l'article"
+        app:layout_constraintTop_toBottomOf="@id/et_nom"
+        android:layout_marginTop="25dp"
+        />
+
+    <EditText
+        android:id="@+id/et_siteWeb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="site web de l'article"
+        app:layout_constraintTop_toBottomOf="@id/et_desc"
+        android:layout_marginTop="25dp"
+        />
+
+    <EditText
+        android:id="@+id/et_prix"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/et_siteWeb"
+        android:layout_marginTop="25dp"
+        android:hint="Prix"
+        />
+
+    <RatingBar
+        android:id="@+id/et_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="4"
+        android:stepSize="1"
+        app:layout_constraintTop_toBottomOf="@id/et_prix"
+        android:layout_marginTop="25dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <ToggleButton
+        android:id="@+id/et_is_achete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/et_note"
+        android:layout_marginTop="25dp"
+        android:textOff="Pas Acheté"
+        android:textOn="Acheté"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <Button
+        android:id="@+id/btn_ajouter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ajouter"
+        app:layout_constraintTop_toBottomOf="@id/et_is_achete"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="25dp"
+        android:onClick="onClickAjouter"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
